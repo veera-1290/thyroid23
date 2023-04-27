@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+</head>
+<body>
+    <h1>Disease classification</h1>
+    <form action="{{ url_for('result') }}" method="post">
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required><br><br>
+
+        <label for="sex">Sex:</label>
+        <select name="sex" id="sex">
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+        </select><br><br>
+
+        <label for="bp">Blood Pressure:</label>
+        <input type="number" name="bp" id="bp" required><br><br>
+
+        <label for="cholesterol">Cholesterol:</label>
+        <input type="number" name="cholesterol" id="cholesterol" required><br><br>
+
+        <label for="na_to_k">Sodium to Potassium Ratio:</label>
+        <input type="number" step="0.01" name="na_to_k" id="na_to_k" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
